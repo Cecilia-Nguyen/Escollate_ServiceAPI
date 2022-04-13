@@ -1,0 +1,10 @@
+import { CreateUserDto } from './dto/create-user.dto';
+import { UserService } from './user.service';
+export declare class UserController {
+    private readonly service;
+    constructor(service: UserService);
+    index(): Promise<import("./schemas/user.schema").User[]>;
+    find(id: string): Promise<import("./schemas/user.schema").User>;
+    create(createUserDto: CreateUserDto): Promise<import("./schemas/user.schema").User>;
+    delete(id: string): Promise<import("./schemas/user.schema").User>;
+}
